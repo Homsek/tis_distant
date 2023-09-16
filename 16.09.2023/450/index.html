@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ТИС</title>
+</head>
+
+<body>
+   <div class="elem">12</div>
+   <button class="button">123</button>
+</body>
+<script>
+   const elem = document.querySelector('.elem');
+   const button = document.querySelector('.button');
+   button.addEventListener('click', function () {
+      let timer = setInterval(() => {
+         elem.textContent = Number(elem.textContent) - 1;
+         if (elem.textContent == 0) {
+            clearInterval(timer);
+         }
+      }, 1000);
+
+   })
+</script>
+
+</html>

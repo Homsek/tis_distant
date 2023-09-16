@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ТИС</title>
+</head>
+
+<body>
+   <button id="start">start</button>
+   <button id="stop">stop</button>
+</body>
+<script>
+   let start = document.querySelector('#start');
+   let stop = document.querySelector('#stop');
+
+   let time = 100;
+
+   let timer;
+
+   start.addEventListener('click', function func() {
+
+      timer = setInterval(function () {
+         console.log(--time);
+      }, 1000)
+
+      if (time <= 0) {
+         clearInterval(timer);
+      }
+
+      this.removeEventListener('click', func);
+   });
+
+   stop.addEventListener('click', function func() {
+
+      clearInterval(timer);
+   });
+
+</script>
+
+</html>

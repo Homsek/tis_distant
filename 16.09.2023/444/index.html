@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ТИС</title>
+</head>
+
+<body>
+
+</body>
+<script>
+   let time = 10;
+
+   let timer = setInterval(function () {
+      console.log(--time);
+
+      if (time <= 0) {
+         clearInterval(timer);
+      }
+   }, 1000);
+</script>
+
+</html>
